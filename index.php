@@ -40,6 +40,13 @@ switch ($action) {
         $tickets->misTickets();
         break;
 
+    // --- ESTE ES EL QUE AGREGAMOS PA ---
+    case 'ayuda':
+        validarSesion();
+        require 'Views/ayuda.php';
+        break;
+    // ----------------------------------
+
     case 'panel-soporte':
         validarSesion();
         if ($_SESSION['rol'] !== 'admin') {
